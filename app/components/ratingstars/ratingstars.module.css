@@ -1,0 +1,19 @@
+.stars {
+  display: inline-flex;
+  gap: 0.15rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.starFilled {
+  color: #f4a261;
+}
+
+.starEmpty {
+  color: #d3d3d3;
+}
+
+.starFilled:hover,
+.starEmpty:hover {
+  transform: scale(1.15);
+}

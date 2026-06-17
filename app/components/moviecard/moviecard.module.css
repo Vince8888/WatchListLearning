@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.posterLink {
+  flex-shrink: 0;
+}
+
+.poster {
+  width: 90px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  background-color: #e9ecef;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0d1b2a;
+  text-decoration: none;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.year {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.watchlistActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
