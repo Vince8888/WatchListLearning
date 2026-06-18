@@ -2,10 +2,18 @@
 "use client";
 import { createContext, useContext, useState } from "react";
 
+
 const WatchlistContext = createContext();
-
 export function WatchlistProvider({ children }) {
+    const [watchlist, setWatchlist] = useState([]);
 
+    // addFilm()
+    // deleteFilm()   
+    return (
+        <WatchlistContext.Provider value={{ watchlist, setWatchlist }}>
+            {children}
+        </WatchlistContext.Provider>
+    );
 }
 
 // Hook personnalisé pour consommer le contexte plus simplement
