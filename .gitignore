@@ -1,0 +1,62 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next.js build output
+.next
+out
+dist
+
+# production
+build
+
+# env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs
+*.log
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# coverage (tests)
+coverage
+
+# cache
+.cache
+.eslintcache
+.turbo
+
+# vercel
+.vercel
+
+# IDE
+.vscode
+.idea
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Docker (si tu en fais)
+docker-compose.override.yml
+
+# Optional: local files
+*.swp
+*.swo

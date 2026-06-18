@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #0d1b2a;
+  padding: 1rem 0;
+}
+
+.navLink {
+  color: #e0e1dd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  color: #f4a261;
+}
+
+.navLinkActive {
+  text-decoration: none;
+  color: #e0e1dd;
+  font-weight: 700;
+  border-bottom: 2px solid #f4a261;
+}
