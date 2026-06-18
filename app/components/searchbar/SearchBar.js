@@ -5,11 +5,11 @@ import styles from "./searchbar.module.css";
 export default function SearchBar() {
 
   return (
-    <form className={styles.form} >
+    <div className={styles.form} >
 
-      <button type="submit" className="btn btn-outline-success ms-2">
+      <button className="btn btn-outline-success ms-2">
 
       </button>
-    </form>
+    </div>
   );
 }
