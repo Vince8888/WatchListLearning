@@ -6,16 +6,6 @@ import { getPosterUrl } from "../../data/tmdb";
 import RatingStars from "../ratingstars/RatingStars";
 import styles from "./moviecard.module.css";
 
-// `movie` peut être :
-//  - un résultat brut de l'API (mode recherche) : { id, title, release_date, poster_path }
-//  - un film de la watchlist (mode watchlist) : { id, title, poster_path, statut, note }
-//
-// Props optionnelles selon le contexte d'utilisation (recherche vs watchlist) :
-//  - onAdd(movie)        -> mode recherche : ajouter à la watchlist
-//  - onToggleStatut(id)  -> mode watchlist : basculer vu / à voir
-//  - onDelete(id)        -> mode watchlist : retirer de la liste
-//  - onRate(id, note)    -> mode watchlist : changer la note
-
 export default function MovieCard({ movie, onAdd, onToggleStatut, onDelete, onRate }) {
   const annee = movie.release_date ? movie.release_date.slice(0, 4) : "—";
 
