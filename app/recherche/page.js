@@ -28,6 +28,11 @@ export default function Recherche() {
     }
   };
 
+  const handleAdd = (movie) => {
+    addMovie(movie);
+    setMessage(`${movie.title} a bien été ajouté`);
+  };
+
   return (
     <main className="container py-4">
       <h1 className="mb-4">Rechercher un film</h1>
@@ -40,7 +45,7 @@ export default function Recherche() {
 
       {!isLoading &&
         resultats.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} onAdd={() => addMovie(movie)} />
+          <MovieCard key={movie.id} movie={movie} onAdd={() => handleAdd(movie)} />
         ))}
     </main>
   );

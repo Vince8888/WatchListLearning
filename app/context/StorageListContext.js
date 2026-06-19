@@ -21,13 +21,9 @@ export function WatchlistProvider({ children, }) {
     }, [watchlist]);
 
     const addMovie = (movie) => {
-        setWatchlist(() => {
-            const exists = watchlist.some((m) => m.id === movie.id);
-            if (exists) {
-                return watchlist
-            } else {
-                return [...watchlist, movie];
-            };
+        setWatchlist((prev) => {
+            const exists = prev.some((m) => m.id === movie.id);
+            return exists ? prev : [...prev, { ...movie, statut: "a-voir" }];
         });
     };
 

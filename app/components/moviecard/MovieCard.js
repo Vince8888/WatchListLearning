@@ -5,10 +5,11 @@ import { FaPlus, FaTrash, FaEye, FaEyeSlash } from "react-icons/fa";
 import { getPosterUrl } from "../../data/tmdb";
 import RatingStars from "../ratingstars/RatingStars";
 import styles from "./moviecard.module.css";
+import { useWatchlist } from "../../context/StorageListContext";
 
-export default function MovieCard({ movie, onAdd, onToggleStatut, onDelete, onRate }) {
+export default function MovieCard({ movie, onAdd, onToggleStatut, onRate }) {
   const annee = movie.release_date ? movie.release_date.slice(0, 4) : "—";
-
+  const { removeMovie } = useWatchlist();
   return (
     <div className={styles.card}>
       <Link href={`/film/${movie.id}`} className={styles.posterLink}>
@@ -52,7 +53,7 @@ export default function MovieCard({ movie, onAdd, onToggleStatut, onDelete, onRa
 
             <RatingStars note={movie.note || 0} onChange={(value) => onRate(movie.id, value)} />
 
-            <button className="btn btn-sm btn-outline-danger" onClick={() => onDelete(movie.id)}>
+            <button className="btn btn-sm btn-outline-danger" onClick={() => removeMovie(movie.id)}>
               <FaTrash />
             </button>
           </div>

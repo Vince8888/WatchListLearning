@@ -39,10 +39,6 @@ export default function Home() {
     );
   };
 
-  const deleteMovie = (id) => {
-    setWatchlist(watchlist.filter((film) => film.id !== id));
-  };
-
   // Dérivation : on ne stocke jamais la liste filtrée, on la recalcule à chaque rendu
   const filtered =
     filtre === "tous" ? watchlist : watchlist.filter((f) => f.statut === filtre);
@@ -86,7 +82,6 @@ export default function Home() {
             movie={film}
             onToggleStatut={toggleStatut}
             onRate={rateMovie}
-            onDelete={deleteMovie}
           />
         ))
       }
@@ -94,22 +89,3 @@ export default function Home() {
   );
 }
 
-// import {
-//   useWatchlist
-// } from "../context/WatchlistContext";
-
-// export default function Home() {
-
-//   const { watchlist } =
-//     useWatchlist();
-
-//   return (
-//     <>
-//       {watchlist.map((movie) => (
-//         <div key={movie.id}>
-//           {movie.title}
-//         </div>
-//       ))}
-//     </>
-//   );
-// }
